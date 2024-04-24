@@ -68,16 +68,15 @@
         $nim = $_GET['nim'];
         $kode_mk = $_GET['kode_mk'];
 
-        // URL untuk mengambil data mahasiswa berdasarkan nim dan kode_mk
+   
         $url = 'http://localhost/uts_psit/api.php?nim=' . $nim . '&kode_mk=' . $kode_mk;
 
-        // Mengambil data mahasiswa dari API
         $response = file_get_contents($url);
 
         // Menangani respons JSON
         $data = json_decode($response, true);
 
-        // Memeriksa jika data berhasil diambil
+
         if ($data['status'] == 1) {
             $nilai = $data['data'][0]['nilai'];
             $kode_mk = $data['data'][0]['kode_mk'];
@@ -96,7 +95,7 @@
             echo '<input type="submit" name="submit" value="Update">';
             echo '</form>';
         } else {
-            // Jika data tidak berhasil diambil
+          
             echo '<p class="message">Gagal mengambil data nilai mahasiswa.</p>';
         }
         ?>

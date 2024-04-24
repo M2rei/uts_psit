@@ -65,7 +65,8 @@ switch ($request_method) {
 function get_all_nilai_mhs()
 {
     global $mysqli;
-    $query = "SELECT mahasiswa.nim, mahasiswa.nama, mahasiswa.alamat, mahasiswa.tanggal_lahir, matakuliah.kode_mk,matakuliah.nama_mk, matakuliah.sks, perkuliahan.nilai 
+    $query = "SELECT mahasiswa.nim, mahasiswa.nama, mahasiswa.alamat, mahasiswa.tanggal_lahir, 
+    matakuliah.kode_mk,matakuliah.nama_mk, matakuliah.sks, perkuliahan.nilai 
             FROM mahasiswa mahasiswa 
             JOIN perkuliahan perkuliahan ON mahasiswa.nim = perkuliahan.nim 
             JOIN matakuliah matakuliah ON perkuliahan.kode_mk = matakuliah.kode_mk";

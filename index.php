@@ -65,7 +65,7 @@
             color: white;
         }
 
-        /* Style for the "Add Nilai" button */
+      
         .add-button {
             text-align: center;
             margin-top: 20px;
@@ -137,7 +137,7 @@
     </div>
 
     <script>
-        // Fungsi untuk menghapus data
+       
         function deleteData(nim, kode_mk) {
             if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
                 // Kirim permintaan delete menggunakan AJAX
